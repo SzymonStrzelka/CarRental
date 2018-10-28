@@ -10,4 +10,5 @@ public class CarRental {
     private final LocalDate startDate;
     private final LocalDate endDate;
     private final float price;
+    private final Car car;
 }
