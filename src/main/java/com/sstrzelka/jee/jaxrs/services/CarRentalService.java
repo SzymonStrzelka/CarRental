@@ -29,4 +29,8 @@ public class CarRentalService {
     public CarRental updateCarRental(int id, CarRentalDto carRentalDto) {
         return carRentalRepository.updateCarRental(id, carRentalDto);
     }
+
+    public CarRental getCarRental(int id) {
+        return carRentalRepository.getCarRental(id);
+    }
 }

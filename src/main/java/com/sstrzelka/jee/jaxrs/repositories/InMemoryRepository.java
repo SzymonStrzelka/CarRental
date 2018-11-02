@@ -46,7 +46,7 @@ public class InMemoryRepository implements Serializable {
 
     CarRental saveCarRental(CarRentalDto carRentalDto){
         CarRental carRental = new CarRental(
-                carRentalMap.lastKey(),
+                carRentalMap.lastKey() + 1,
                 carRentalDto.getStartDate(),
                 carRentalDto.getEndDate(),
                 carRentalDto.getPrice(),
@@ -55,7 +55,7 @@ public class InMemoryRepository implements Serializable {
         return carRental;
     }
 
-    private Car getCar(int id){
+    Car getCar(int id){
         return carMap.get(id);
     }
 
@@ -77,5 +77,9 @@ public class InMemoryRepository implements Serializable {
         CarRental carRental = new CarRental(id, carRentalDto.getStartDate(), carRentalDto.getEndDate(), carRentalDto.getPrice(), getCar(carRentalDto.getCarId()));
         carRentalMap.put(id, carRental);
         return carRental;
+    }
+
+    CarRental getCarRental(int id) {
+        return carRentalMap.get(id);
     }
 }

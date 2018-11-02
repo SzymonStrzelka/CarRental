@@ -29,4 +29,8 @@ public class CarRepository implements Serializable {
     public Car updateCar(int id, CarDto carDto) {
         return repository.updateCar(id, carDto);
     }
+
+    public Car getCar(int id) {
+        return repository.getCar(id);
+    }
 }

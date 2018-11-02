@@ -20,6 +20,12 @@ public class CarController {
         return carService.getCarList();
     }
 
+    @GET @Path("/{id}")
+    public Car getCar(@PathParam("id") int id){
+        return carService.getCar(id);
+    }
+
+
     @POST @Consumes("application/json")
     public Car createCar(CarDto carDto){
         return carService.saveCar(carDto);

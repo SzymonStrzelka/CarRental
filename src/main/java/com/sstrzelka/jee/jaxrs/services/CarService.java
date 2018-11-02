@@ -30,4 +30,8 @@ public class CarService implements Serializable {
     public Car updateCar(int id, CarDto carDto) {
         return carRepository.updateCar(id, carDto);
     }
+
+    public Car getCar(int id) {
+        return carRepository.getCar(id);
+    }
 }

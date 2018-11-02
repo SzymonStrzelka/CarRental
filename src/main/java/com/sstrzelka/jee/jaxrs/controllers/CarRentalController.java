@@ -20,6 +20,11 @@ public class CarRentalController {
         return carRentalService.getCarRentalList();
     }
 
+    @GET @Path("/{id}")
+    public CarRental getCarRental(@PathParam("id") int id){
+        return carRentalService.getCarRental(id);
+    }
+
     @POST
     @Consumes("application/json")
     public CarRental createCar(CarRentalDto carRentalDto){

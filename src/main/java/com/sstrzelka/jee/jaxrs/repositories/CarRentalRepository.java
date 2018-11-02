@@ -28,4 +28,8 @@ public class CarRentalRepository {
     public CarRental updateCarRental(int id, CarRentalDto carRentalDto) {
         return repository.updateCarRental(id, carRentalDto);
     }
+
+    public CarRental getCarRental(int id) {
+        return repository.getCarRental(id);
+    }
 }
