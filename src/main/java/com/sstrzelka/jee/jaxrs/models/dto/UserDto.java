@@ -7,16 +7,11 @@ import lombok.NoArgsConstructor;
 import javax.validation.constraints.NotNull;
 
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
-public class CarDto {
-
+@AllArgsConstructor
+public class UserDto {
     @NotNull
-    private String brand;
-
+    private String firstName;
     @NotNull
-    private String model;
-
-    @NotNull
-    private float hp;
+    private String lastName;
 }

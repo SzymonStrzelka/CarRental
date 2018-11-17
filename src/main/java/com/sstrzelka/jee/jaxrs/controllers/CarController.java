@@ -5,6 +5,7 @@ import com.sstrzelka.jee.jaxrs.models.entities.Car;
 import com.sstrzelka.jee.jaxrs.services.CarService;
 
 import javax.inject.Inject;
+import javax.validation.Valid;
 import javax.ws.rs.*;
 import javax.ws.rs.core.Response;
 import java.util.Collection;
@@ -27,7 +28,7 @@ public class CarController {
 
 
     @POST @Consumes("application/json")
-    public Car createCar(CarDto carDto){
+    public Car createCar(@Valid CarDto carDto){
         return carService.saveCar(carDto);
     }
 
@@ -38,7 +39,7 @@ public class CarController {
     }
 
     @PUT @Path("/{id}")
-    public Car updateCar(@PathParam("id") int id, CarDto carDto){
+    public Car updateCar(@PathParam("id") int id, @Valid CarDto carDto){
         return carService.updateCar(id, carDto);
     }
 }
