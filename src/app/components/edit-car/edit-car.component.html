@@ -1,0 +1,26 @@
+<form #carForm="ngForm" *ngIf="car">
+  <table class="table table-striped">
+    <tr>
+      <td>Brand:</td>
+      <td>
+        <input type="text" name="brand" class="form-control" [(ngModel)]="car.brand">
+      </td>
+    </tr>
+
+    <tr>
+      <td>Model:</td>
+      <td>
+        <input type="text" name="model" class="form-control" [(ngModel)]="car.model">
+      </td>
+    </tr>
+
+    <tr>
+      <td>Hp:</td>
+      <td>
+        <input type="text" name="hp" class="form-control" [(ngModel)]="car.hp">
+      </td>
+    </tr>
+  </table>
+  <button type="button" class="btn btn-primary" (click)="save()">Save</button>
+  <button type="button" class="btn btn-default" routerLink="/cars">Go back</button>
+</form>
